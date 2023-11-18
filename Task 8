@@ -1,0 +1,235 @@
+Problem 1: Check the Sum of Integer
+
+import java.util.Scanner;
+
+public class CheckSumComparison {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the value of a: ");
+        int a = scanner.nextInt();
+
+        System.out.print("Enter the value of b: ");
+        int b = scanner.nextInt();
+
+        System.out.print("Enter the value of c: ");
+        int c = scanner.nextInt();
+
+        System.out.print("Enter the value of d: ");
+        int d = scanner.nextInt();
+
+        if (a + b > c + d) {
+            System.out.println("The sum of a and b is greater than the sum of c and d.");
+        } else {
+            System.out.println("The sum of a and b is not greater than the sum of c and d.");
+        }
+
+        scanner.close();
+    }
+}
+
+
+
+Problem 2: Check Even Number
+
+import java.util.Scanner;
+
+public class CheckEvenNumber {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter an integer: ");
+        int num = scanner.nextInt();
+
+        if (num % 2 == 0) {
+            System.out.println("The entered number is even.");
+        } else {
+            System.out.println("The entered number is odd.");
+        }
+
+        scanner.close();
+    }
+}
+
+
+
+Problem 3: Print Characters from A to Z
+
+public class PrintAlphabets {
+    public static void main(String[] args) {
+        for (char ch = 'A'; ch <= 'Z'; ch++) {
+            System.out.print(ch + " ");
+        }
+    }
+}
+
+
+
+Problem 4: Swap Two Numbers
+
+import java.util.Scanner;
+
+public class SwapNumbers {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the first number: ");
+        int num1 = scanner.nextInt();
+
+        System.out.print("Enter the second number: ");
+        int num2 = scanner.nextInt();
+
+        System.out.println("Before swapping: " + num1 + ", " + num2);
+
+        // Swap using an additional variable
+        int temp = num1;
+        num1 = num2;
+        num2 = temp;
+
+        System.out.println("After swapping: " + num1 + ", " + num2);
+
+        scanner.close();
+    }
+}
+
+Problem 5: Check Prime Number
+
+import java.util.Scanner;
+
+public class CheckPrimeNumber {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int num = scanner.nextInt();
+
+        boolean isPrime = true;
+
+        if (num <= 1) {
+            isPrime = false;
+        } else {
+            for (int i = 2; i <= Math.sqrt(num); i++) {
+                if (num % i == 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+        }
+
+        if (isPrime) {
+            System.out.println(num + " is a prime number.");
+        } else {
+            System.out.println(num + " is not a prime number.");
+        }
+
+        scanner.close();
+    }
+}
+
+
+Problem 6: Calculate Factorial
+
+
+import java.util.Scanner;
+
+public class CalculateFactorial {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int num = scanner.nextInt();
+
+        int factorial = 1;
+
+        for (int i = 1; i <= num; i++) {
+            factorial *= i;
+        }
+
+        System.out.println(num + "! = " + factorial);
+
+        scanner.close();
+    }
+}
+
+
+Problem 7: Print Length of String
+
+import java.util.Scanner;
+
+public class StringLength {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter a string: ");
+        String msg = scanner.nextLine();
+
+        int length = msg.length();
+
+        System.out.println("Length of the string: " + length);
+
+        scanner.close();
+    }
+}
+
+Problem 8: Print "Welcome to Guvi" 10 Times
+
+public class WelcomeMessage {
+    public static void main(String[] args) {
+        for (int i = 1; i <= 10; i++) {
+            System.out.println("Welcome to Guvi");
+        }
+    }
+}
+
+
+Problem 9: Check Senior Citizen
+
+import java.util.Scanner;
+
+public class SeniorCitizenCheck {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the person's age: ");
+        int age = scanner.nextInt();
+
+        if (age >= 60) {
+            System.out.println("The person is a senior citizen.");
+        } else {
+            System.out.println("The person is not a senior citizen.");
+        }
+
+        scanner.close();
+    }
+}
+
+
+Problem 10: Count Number of Digits in an Integer
+
+import java.util.Scanner;
+
+public class CountDigits {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter an integer: ");
+        int num = scanner.nextInt();
+
+        int count = 0;
+        int temp = num;
+
+        while (temp != 0) {
+            temp /= 10;
+            count++;
+        }
+
+        System.out.println("Number of digits in " + num + ": " + count);
+
+        scanner.close();
+    }
+}
+
+
+
+
+
